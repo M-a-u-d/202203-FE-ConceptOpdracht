@@ -1,0 +1,369 @@
+/*1. ----------------------global styles-----*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*2. -----------------------typografie-----*/
+
+h1 {
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+    margin: 30px 10px 30px 10px;
+    text-align: center;
+    color: #ffffff
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 30px 10px 30px 10px;
+    color: #4845E4;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+    margin: 65px 10px 30px 10px;
+
+}
+h4 {
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    margin:1px 10px 10px 25px;
+    color: #4845E4;
+}
+
+p, a {
+    font-family: roboto, serif;
+    margin: 1px 10px 10px 10px;
+}
+
+
+    @media screen and (min-width: 768px) {
+    p {
+        font-size: 10px;
+    }
+    }
+
+    @media screen and (min-width: 992px) {
+    p {
+        font-size: 14px;
+    }
+    }
+.inthebox{
+    font-size: x-small;
+    margin: 5px 10px 10px 25px;
+}
+
+/*3. ----------------------------layout-----*/
+
+.content-doos {
+    flex-basis: 400Px;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 0;
+    text-align: center;
+    padding: 30px;
+    width: 800px;
+    z-index: 1;
+    /*justify-content: space-between;*/
+}
+
+.line{
+    border-bottom: 30px solid white;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.line-end {
+    border-top: 30px solid white;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+.line-work {
+    border-top: 30px solid white;
+    border-left: 100vw solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index:0 ;
+}
+    /*4.1 -----Area - Header-----*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-start;
+    color: white;
+    background-color: #4845E4;
+    /*position: ;*/
+    height: 80px;
+    width: 100%;
+    font-family: roboto, serif;
+    padding: 0;
+
+}
+ul {
+    display: flex;
+    /*align-self: ;*/
+    /*flex-direction: row;*/
+    /*!*grid-row-end: auto;*!*/
+    margin: 30px;
+}
+li {
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+header, footer {
+    background-color: #4845E4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: white;
+    /*justify-content: space-between;*/
+
+}
+
+button {
+    background-color: #ED4385;
+    text-align: center;
+    padding: 20px 35px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    box-shadow: 3px 8px 13px 1px rgba(0,0,0,0.30);
+    left: calc(50% - 15px);
+}
+
+.squiggle-streepje img{
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: 20px;
+    z-index: 2;
+
+}
+
+.squiggle img {
+    height: 20%;
+    width: 20%;
+    position: relative;
+    bottom: 20px;
+    padding: 15px;
+
+}
+
+/*4.2 -------------------------Area - Hello-----*/
+.text-hello::before {
+    content: "HELLO";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:0;
+    left: 20%;transform: translateX(-50%);
+    z-index: -1;
+    font-family: roboto, serif;
+    font-size: 230px;
+    font-weight: bold;
+    color: #4845E4; opacity: 6%;
+
+}
+
+.hello {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*4.2 -------------------------Area - work-----*/
+.text-work::before {
+    content: "WORK";
+    display: block;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 20%;transform: translateX(-50%);
+    position: absolute;
+    z-index: -1;
+    font-family: roboto, serif;
+    font-size: 230px;
+    font-weight: bold;
+    color: white; opacity: 100%;
+    text-align: center;
+}
+.work {
+    position: relative;
+    padding: 100px 0;
+    background-color: #F3F6F9;
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 350px 350px 350px;
+    column-gap: 34px;
+    row-gap: 34px;
+    grid-template-areas: "a b" "c d" "e f" ;
+    z-index: -1;
+}
+
+img {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.rolling-stone {
+    grid-area: a;
+}
+
+.figure1 {
+    grid-area: b;
+}
+
+.variety{
+    grid-area: d;
+}
+
+.figure2 {
+    grid-area: c;
+}
+
+.worth{
+    grid-area: e;
+}
+
+.figure3{
+    grid-area: f;
+}
+
+/*4.3 -------------------------Area - service-----*/
+
+.text-service::before {
+    content: "SERVICE";
+    display: block;
+    width: 0;
+    height: 0;
+    left: 10%; transform: translateX(-50%);
+    z-index: -1;
+    font-family: roboto, serif;
+    font-size: 230px;
+    font-weight: bold;
+    color: #4845E4; opacity: 6%;
+    text-align: center;
+    position: absolute;
+}
+
+.service {
+    padding: 100px 20px 100px 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 250px;
+    column-gap: 5px;
+    row-gap: 34px;
+    grid-template-areas: "a b c" "d e f" ;
+    /*display: inline-block;*/
+    /*padding: 10px;*/
+}
+
+.boxje1, .boxje2, .boxje3, .boxje4, .boxje5, .boxje6 {
+    box-shadow: 3px 8px 13px 1px rgba(0, 0, 0, 0.35);
+    border: 1px solid #4845E4;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #7A7A7A;
+    z-index: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+}
+
+.logo img {
+    display: inline;
+    width: 80px;
+    height: 60px;
+    margin: 30px 10px 0 25px;
+}
+
+.boxje1 {
+    grid-area: a;
+}
+
+.boxje2 {
+    grid-area: b;
+}
+
+.boxje3 {
+    grid-area: c;
+}
+
+.boxje4 {
+    grid-area: d;
+}
+
+.boxje5 {
+    grid-area: e;
+}
+
+.boxje6 {
+    grid-area: f;
+}
+
+/*5 -----------wel sluiten de zooi met een formulier en een footer---------*/
+
+.form {
+    background-color: #4845E4;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-family: roboto, serif;
+}
+.forminform {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: flex-start;
+    line-height: 1.4em;
+    padding: 30px;
+
+}
+footer {
+    text-align: center;
+    color: white;
+    font-size: x-small;
+    background-color: black;
+    padding: 5px 0 5px;
+
+}
+
+
+
